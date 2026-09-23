@@ -1,0 +1,35 @@
+#Ask the user to enter 10 numbers.
+#Calculate:
+#• Sum
+#• Average
+#• Largest number
+#• Smallest number
+#• Number of even numbers
+#• Number of odd numbers
+
+
+code:
+
+numbers = []
+
+for i in range(1, 11):
+    num = int(input("Enter number: "))
+    numbers.append(num)
+
+# Second: calculate after all 10 numbers
+print("Sum:", sum(numbers))
+print("Average:", sum(numbers) / 10)
+print("Largest:", max(numbers))
+print("Smallest:", min(numbers))
+
+even = 0
+odd = 0
+
+for n in numbers:
+    if n % 2 == 0:
+        even += 1
+    else:
+        odd += 1
+
+print("Even numbers:", even)
+print("Odd numbers:", odd)
