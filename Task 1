@@ -2,3 +2,41 @@
 // calculate
 // Total marks ,percentage. Grade , Pass/fail.
 // use a loop to enter the marks.
+
+
+code;
+
+Total = 0
+passed = True
+
+for i in range(1, 6):
+    subjmarks = int(input("Enter marks for subject " + str(i) + ": "))
+    total = Total + subjmarks
+
+    if marks < 40:
+        passed = False
+
+perct = total / 500 * 100
+
+print("Total Marks:", total)
+print("Percentage:", perct)
+
+if perct >= 80:
+    grade = "A+"
+elif perct >= 70:
+    grade = "A"
+elif perct >= 60:
+    grade = "B"
+elif perct >= 50:
+    grade = "C"
+elif perct >= 40:
+    grade = "D"
+else:
+    grade = "F"
+
+print("Grade:", grade)
+
+if passed:
+    print("Result: Pass")
+else:
+    print("Result: Fail")
