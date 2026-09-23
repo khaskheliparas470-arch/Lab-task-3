@@ -1,0 +1,37 @@
+#ATM code 
+
+Balance = 50000
+
+while True:
+    print("1. Check Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        print("Your Balance is:", Balance)
+
+    elif choice == 2:
+        cash = int(input("Enter amount to deposit : "))
+        Newbalance = Balance + cash
+        print("Amount deposited successfully.")
+        print("Your New balance is:", Newbalance)
+
+    elif choice == 3:
+        amount = int(input("Enter amount to withdraw: "))
+
+        if amount <= Balance:
+            balance = Balance - amount
+            print("Amount withdrawn successfully.")
+            print("Your new balance is:", balance)
+        else:
+            print("Insufficient balance.")
+
+    elif choice == 4:
+        print("Exit")
+        break
+
+    else:
+        print("Invalid choice.")
